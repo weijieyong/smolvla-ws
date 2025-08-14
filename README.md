@@ -10,7 +10,8 @@ SmolVLA is easy to use for fine-tuning or integration into robotics workflows.
 - Make sure you have a working GPU and CUDA drivers (tested: Ubuntu 24.04, RTX 5080, CUDA 12.8).
 - Compiled and build FFmpeg 7.1.1 from source ([guide](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu#FFmpeg))
 
-> [!NOTE] Tested System Configuration
+> [!NOTE]
+> **Tested System Configuration**  
 > - **OS:** Ubuntu 24.04.3 LTS (x86_64)
 > - **Kernel:** 6.16.0-061600-generic
 > - **GPU:** NVIDIA GeForce RTX 5080
