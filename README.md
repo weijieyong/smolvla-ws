@@ -24,8 +24,10 @@ SmolVLA is easy to use for fine-tuning or integration into robotics workflows.
 ## Clone and Install
 Clone the repo and install SmolVLA dependencies:
 ```sh
-git clone https://github.com/weijieyong/lerobot.git
-cd lerobot
+git clone --recurse-submodules https://github.com/weijieyong/smolvla-ws.git
+# If you already cloned without submodules:
+# git submodule update --init --recursive
+cd smolvla-ws/lerobot
 uv venv --python 3.10
 uv pip install -e ".[smolvla]"
 ```
@@ -54,6 +56,7 @@ Run fine-tuning on a base model with a HuggingFace dataset:
 Adjust `batch_size` value based on your GPU's VRAM. to prevent OOM
 
 ```sh
+# from the lerobot dir
 uv run src/lerobot/scripts/train.py \
   --policy.path=lerobot/smolvla_base \
   --dataset.repo_id=aractingi/il_gym0 \
@@ -75,6 +78,7 @@ more about the training script [here](https://github.com/huggingface/lerobot/blo
 - visualizing with rerun, on the lerobot/pusht dataset
 
 ```sh
+# from the lerobot dir
 uv run src/lerobot/scripts/visualize_dataset.py \
   --repo-id lerobot/aloha_static_coffee_new \
   --episode-index 0
