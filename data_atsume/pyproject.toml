@@ -1,0 +1,10 @@
+[project]
+name = "data-atsume"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "h5py>=3.14.0",
+    "rerun-sdk>=0.24.1",
+]
